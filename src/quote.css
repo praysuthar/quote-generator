@@ -1,15 +1,48 @@
-.body {
+.title {
+	margin-bottom: 6rem;
+}
+.card {
+	width: 70vw;
+	max-width: 100vw;
 	height: 100%;
-	margin: 0;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background: rgb(255, 122, 113);
-	background: linear-gradient(
-		180deg,
-		rgba(255, 122, 113, 1) 0%,
-		rgba(250, 152, 110, 1) 100%
-	);
+	transition: all 0.2s;
+	position: relative;
+	border-radius: 10px;
+	background-color: aliceblue;
+	cursor: pointer;
+	box-shadow: 7px 7px 0px 0px #0b2447;
+}
+.card-body {
+	width: inherit;
+	height: inherit;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+.card:hover {
+	transform: scale(1.04) rotate(1deg);
+}
+h2 {
+	color: black;
 }
 p {
+	color: black;
+}
+.btn {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: rgb(27, 27, 27);
+	padding: 10px 30px;
+	border: 1px solid;
+	border-radius: 1000px;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.btn:hover {
 	color: aliceblue;
+	background-color: rgb(27, 27, 27);
+	border: 1px solid rgb(40, 144, 241);
 }
