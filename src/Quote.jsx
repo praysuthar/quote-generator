@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-const API_KEY = "Cmo7Wz8vbQ1LQWJoKoKtXw==DqnOMDkqGk49Nx63";
+import "./quote.css";
+const API_KEY = import.meta.env.VITE_API_KEY;
 function Quote() {
 	const [quote, setQuote] = useState([]);
+
 	useEffect(() => {
 		fetch(`https://api.api-ninjas.com/v1/quotes`, {
 			method: "GET",
@@ -12,9 +14,10 @@ function Quote() {
 			.then((json) => setQuote(json))
 			.catch((error) => console.error(error));
 	}, []);
+	console.log(quote);
 
 	return (
-		<div>
+		<div className="body">
 			{quote.map((item, index) => (
 				<div key={index}>
 					<h2>{item.quote}</h2>
